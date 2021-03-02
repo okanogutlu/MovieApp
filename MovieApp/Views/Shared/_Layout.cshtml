@@ -1,0 +1,35 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Movie App</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css\bootstrap.css" />
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+
+
+    <header>
+        <partial name="_navbar" />
+    </header>
+    
+    <main>
+
+        <div class="container mt-4">
+            @RenderBody()
+        </div>
+    </main>
+    <footer>
+        <partial name="_footer" />
+    </footer>
+  
+</body>
+</html>
